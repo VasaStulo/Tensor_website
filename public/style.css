@@ -1,0 +1,19 @@
+body {
+    background:url("images/bg.svg") no-repeat;
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+}
+.offer_img{
+    width: 356px;
+    height: 503px;
+}
+
+.container{
+    height: 100vh;
+    padding: 76px 61px 33px 155px;
+}
+
+.offer-title__horizontal,.offer-title__vertical{
+    font-weight: bold;
+    color: #FCE7FC;
+}
