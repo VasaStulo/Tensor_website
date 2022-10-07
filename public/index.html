@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+      <link rel="icon" href="img/favicon.ico" />
       <link rel="stylesheet" type="text/css" href="null_style.css">
       <link rel="stylesheet" type="text/css" href="style.css">
       <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,14 +16,35 @@
     <title>Test App</title>
   </head>
   <body >
-
-      <div class="offer">
-          <div class="container">
-              <p class="offer-title__horizontal">LISTEN</p>
-              <p class="offer-title__vertical">TO MUSIC</p>
-              <img class="offer_img" src="images/girl.svg">
+  <header class="header">
+      <div class="header-wrapper wrapper">
+          <div class="header-start">
+              <a href="#" class="header-start__logo"><img src="img/logo.svg" alt="ico" /></a>
+          </div>
+          <div class="header-end">
+              <nav class="nav">
+                  <button class="nav-toggle" aria-expanded="false" type="button">
+                      menu
+                  </button>
+                  <ul class="nav-wrapper">
+                      <li class="nav-wrapper__item"><a href="#">Artist</a></li>
+                      <li class="nav-wrapper__item"><a href="#">Tracks</a></li>
+                  </ul>
+              </nav>
+              <div class="search">
+                  <form class="search-form" action="">
+                      <input
+                          type="search"
+                          name="search"
+                          id="search"
+                          placeholder="Search"
+                      />
+                      <button class="search-btn">  </button>
+                  </form>
+              </div>
           </div>
       </div>
+  </header>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
   </body>
