@@ -2,14 +2,13 @@ body {
     background: #000;
     background-size: cover;
     font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #fff;
+
 }
 
 a {
     color: #fff;
-}
-.header-start__logo {
-    font-weight: bold;
-    font-size: 20px;
 }
 
 .header {
@@ -33,12 +32,14 @@ a {
 .nav-wrapper{
     display: flex;
     justify-content: space-between;
+    padding-right: 40px;
 }
 
 .nav-wrapper__item a {
-    /*letter-spacing: ;*/
+    letter-spacing: 3px;
+    font-weight: 800;
     display: block;
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 3rem;
 }
 
 .nav-toggle {
@@ -70,4 +71,118 @@ a {
     background-size: 30px;
     background-position-y: 25%;
     background-position-x: 30%;
+}
+
+.music{
+    margin-top: 50px;
+    text-align: center;
+}
+
+h1{
+    font-size: 52px;
+    font-weight: 600;
+}
+
+.subtitle{
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+hr{
+    border: none;
+    background-color: #D83868;
+    height: 2px;
+    width: 80px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.artists-list{
+    padding: 0 30px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 30px -5px;
+    justify-content: space-between;
+}
+
+
+.artist-card{
+    margin: 10px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.circle{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+.artist-card__title{
+    margin-top: 40px;
+}
+
+.genre{
+    color: #707070;
+    font-weight: 100;
+}
+.artists__one{
+    background: url('./img/pyro.jpg')  no-repeat;
+    background-size: cover;
+}
+
+.artists__two{
+    background: url('./img/dragon.jpg')  no-repeat;
+    background-size: cover;
+}
+
+.artists__three{
+    background: url('./img/joji.jpg')  no-repeat;
+    background-size: cover;
+}
+
+.artists__four{
+    background: url('./img/billie.jpg')  no-repeat;
+    background-size: cover;
+}
+
+.artists__five{
+    background: url('./img/week.jpg')  no-repeat;
+    background-size: cover;
+}
+
+
+/* POPULAR TRACKS*/
+
+.popular-tracks{
+    margin-top: 80px;
+}
+.popular-track{
+    display: flex;
+    margin-top: 70px;
+}
+
+.track-cover{
+    width: 80px;
+    height: 80px;
+    background: #60477b;
+}
+
+.track-info{
+    max-height: 80px;
+    margin-left: 25px;
+    max-width: 330px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.track-info__title{
+    font-weight: 600;
 }
