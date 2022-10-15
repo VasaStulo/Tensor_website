@@ -18,7 +18,6 @@ a {
 }
 
 .header {
-    /*position: relative;*/
     flex: 1 0 auto;
 }
 
@@ -34,6 +33,12 @@ a {
     align-items: center;
 }
 
+@media(max-width: 1024px){
+    .header-wrapper{
+        flex-direction: column;
+    }
+}
+
 .nav-wrapper {
     display: flex;
     justify-content: space-between;
@@ -45,10 +50,6 @@ a {
     font-weight: 800;
     display: block;
     padding: 1.5rem 3rem;
-}
-
-.nav-toggle {
-    display: none;
 }
 
 .search-form {
@@ -113,11 +114,11 @@ hr {
 
 .artists-list {
     padding: 0 30px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin: 30px -5px;
-    justify-content: space-between;
+    margin: 30px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+    grid-gap: 2vw;
+    justify-content: space-around;
 }
 
 .artist-card {
@@ -179,29 +180,24 @@ hr {
 .popular-tracks {
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .tracks-list {
-    padding: 30px 30px 0;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    flex: 0 0 30%;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 33.3%);
+    grid-gap: 10px;
+    padding: 40px 50px;
+    justify-items: stretch;
+    justify-content: space-around;
 }
 
 .popular-track {
-    width: 30%;
     display: flex;
-    height: 100px;
     margin-bottom: 20px;
 }
 
 .track-info {
-    max-height: 80px;
     margin-left: 25px;
-    max-width: 330px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -251,30 +247,18 @@ hr {
 /*FOOTER*/
 
 .footer {
-    display: flex;
-    flex: 0 0 auto;
-    justify-content: center;
-    width: 100%;
-    padding: 30px 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 150px);
+    grid-gap: 2vw;
+    justify-content: space-around;
+    padding: 30px 40px;
     background-color: #1a1a1a;
 }
 
-.footer-space {
-    flex: 1 1 auto;
-    margin: 0 80px;
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .footer-text {
-    width: 5%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 10px 100px 10px 150px;
-    flex: 0 0 13%;
 }
 
 .head-text {
@@ -285,5 +269,4 @@ hr {
 
 .child-text {
     margin-bottom: 7px;
-    width: 170px;
 }
