@@ -1,0 +1,272 @@
+body {
+    background: #000;
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    height: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+a {
+    color: #fff;
+}
+
+.header {
+    flex: 1 0 auto;
+}
+
+.header-end {
+    display: flex;
+    align-items: center;
+}
+
+.header-wrapper {
+    display: flex;
+    padding: 1rem 40px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media(max-width: 1024px){
+    .header-wrapper{
+        flex-direction: column;
+    }
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 40px;
+}
+
+.nav-wrapper__item a {
+    letter-spacing: 3px;
+    font-weight: 800;
+    display: block;
+    padding: 1.5rem 3rem;
+}
+
+.search-form {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.search-form input {
+    min-width: 200px;
+    appearance: none;
+    border: 1px solid #fff;
+    background-color: #fff;
+    border-radius: 12px 0 0 12px;
+    font-size: 16px;
+    padding: 0.5rem;
+    height: 40px;
+}
+
+.search-btn {
+    border: 1px solid #fff;
+    border-radius: 0 12px 12px 0;
+    height: 40px;
+    width: 60px;
+    background: white url('./img/search_icon.svg') no-repeat;
+    background-size: 30px;
+    background-position-y: 25%;
+    background-position-x: 30%;
+}
+
+.music {
+    margin-top: 50px;
+    text-align: center;
+    flex: 1 0 auto;
+}
+
+h1 {
+    font-size: 52px;
+    font-weight: 600;
+}
+
+.subtitle {
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+hr {
+    border: none;
+    background-color: #D83868;
+    height: 2px;
+    width: 80px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+/* POPULAR ARTISTS*/
+
+.artists {
+    padding: 0 150px;
+}
+
+.artists-list {
+    padding: 0 30px;
+    margin: 30px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+    grid-gap: 2vw;
+    justify-content: space-around;
+}
+
+.artist-card {
+    margin: 10px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.circle {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+.artist-card__title {
+    margin-top: 40px;
+}
+
+.genre {
+    margin-top: 4px;
+    color: #707070;
+    font-weight: 100;
+}
+
+.artists__one {
+    background: url('./img/pyro.jpg') no-repeat;
+    background-size: cover;
+}
+
+.artists__two {
+    background: url('./img/dragon.jpg') no-repeat;
+    background-size: cover;
+}
+
+.artists__three {
+    background: url('./img/joji.jpg') no-repeat;
+    background-size: cover;
+}
+
+.artists__four {
+    background: url('./img/billie.jpg') no-repeat;
+    background-size: cover;
+}
+
+.artists__five {
+    background: url('./img/week.jpg') no-repeat;
+    background-size: cover;
+}
+
+.artists__six {
+    background: url('./img/lil.jpg') no-repeat;
+    background-size: cover;
+}
+
+/* POPULAR TRACKS*/
+
+.popular-tracks {
+    display: flex;
+    flex-direction: column;
+}
+
+.tracks-list {
+    display: grid;
+    grid-template-columns: repeat(3, 33.3%);
+    grid-gap: 10px;
+    padding: 40px 50px;
+    justify-items: stretch;
+    justify-content: space-around;
+}
+
+.popular-track {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.track-info {
+    margin-left: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.track-info__title {
+    font-weight: 600;
+}
+
+.track-cover {
+    width: 80px;
+    height: 80px;
+    background: #60477b;
+}
+
+.track__one {
+    background: url('./img/track_1.webp') no-repeat;
+    background-size: cover;
+}
+
+.track__two {
+    background: url('./img/track_2.jpg') no-repeat;
+    background-size: cover;
+}
+
+.track__three {
+    background: url('./img/track_3.webp') no-repeat;
+    background-size: cover;
+}
+
+.track__four {
+    background: url('./img/track_4.png') no-repeat;
+    background-size: cover;
+}
+
+.track__five {
+    background: url('./img/track_5.jpg') no-repeat;
+    background-size: cover;
+}
+
+.track__six {
+    background: url('./img/track_6.png') no-repeat;
+    background-size: cover;
+}
+
+/*FOOTER*/
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 150px);
+    grid-gap: 2vw;
+    justify-content: space-around;
+    padding: 30px 40px;
+    background-color: #1a1a1a;
+}
+
+.footer-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.head-text {
+    font-weight: 600;
+    color: #5d5d5d;
+    margin-bottom: 10px;
+}
+
+.child-text {
+    margin-bottom: 7px;
+}
