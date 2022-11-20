@@ -25,7 +25,7 @@
     border-radius: 0 12px 12px 0;
     height: 70px;
     width: 60px;
-    background: white url('./img/search_icon.svg') no-repeat;
+    background: white url('../img/search_icon.svg') no-repeat;
     background-size: 40px;
     background-position-y: 50%;
     background-position-x: 30%;
