@@ -49,11 +49,19 @@ async function init() {
  */
 async function showTopArtist() {
     const {artists} = await get('', {method: 'chart.gettopartists', limit: 12});
-    const topArtistList = document.getElementsByClassName('artists-list')[0];
-    for (const a of artists.artist) {
+
+    const artistsWithTags = await Promise.all(artists.artist.map(async (a) => {
         const tags = await getGenreByArtistName(a.name);
-        topArtistList.innerHTML += renderHotArtist(a.name, tags, a.image[4]['#text'])
-    }
+        return {
+            ...a, tags
+        }
+    }))
+
+    const topArtistList = document.getElementsByClassName('artists-list')[0];
+    artistsWithTags.forEach((a) => {
+        topArtistList.innerHTML += renderHotArtist(a.name, a.tags, a.image[4]['#text'])
+    })
+    
 }
 
 /**
@@ -62,11 +70,18 @@ async function showTopArtist() {
  */
 async function showTopTracks() {
     const {tracks} = await get('', {method: 'chart.gettoptracks', limit: 18});
-    const topTracksList = document.getElementsByClassName('tracks-list')[0];
-    for (const t of tracks.track) {
+
+    const tracksWithTags = await Promise.all(tracks.track.map(async (t) => {
         const tags = await getGenreByArtistName(t.artist.name);
-        topTracksList.innerHTML += renderPopularTrack(t.name, t.artist.name, tags, t.image[3]['#text'])
-    }
+        return {
+            ...t, tags
+        }
+    }))
+
+    const topTracksList = document.getElementsByClassName('tracks-list')[0];
+    tracksWithTags.forEach((t) => {
+        topTracksList.innerHTML += renderPopularTrack(t.name, t.artist.name, t.tags, t.image[3]['#text'])
+    })
 }
 
 /**
