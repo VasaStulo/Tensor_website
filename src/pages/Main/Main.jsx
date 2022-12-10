@@ -5,6 +5,7 @@ import artists from './styles/Artists.module.css';
 import ArtistsList from "../../components/ArtistsList/ArtistsList";
 import API from "../../utils/API";
 import TracksList from "../../components/TracksList/TracksList";
+import Subtitle from "../../components/ui/Subtitle/Subtitle";
 
 const Main = () => {
 
@@ -56,12 +57,12 @@ const Main = () => {
         <main className={main.music}>
             <h1>MUSIC</h1>
             <div className={artists.content}>
-                <h2 className="subtitle">Hot right now</h2>
+                <Subtitle title={"Hot right now"}/>
                 <hr/>
                 <ArtistsList artistsList={artistsList}/>
             </div>
             <div className={tracks.content}>
-                <h2 className="subtitle">Popular tracks</h2>
+                <Subtitle title={"Popular tracks"}/>
                 <hr/>
                 <TracksList tracksList={tracksList}/>
             </div>

@@ -1,6 +1,6 @@
 /*FOOTER*/
 
-.footer {
+.content {
     display: grid;
     grid-template-columns: repeat(auto-fit, 150px);
     grid-gap: 2vw;

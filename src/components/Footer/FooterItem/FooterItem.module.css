@@ -1,0 +1,16 @@
+/*FOOTER ITEM*/
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title {
+    font-weight: 600;
+    color: #5d5d5d;
+    margin-bottom: 10px;
+}
+
+.text {
+    margin-bottom: 7px;
+}
