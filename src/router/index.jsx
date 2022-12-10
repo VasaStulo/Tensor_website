@@ -1,5 +1,5 @@
 import {createBrowserRouter} from "react-router-dom";
-import Search from "../pages/Search";
+import Search from "../pages/Search/Search";
 import Root from "./Root";
 import ErrorPage from "../pages/ErrorPage";
 import Main from "../pages/Main/Main";

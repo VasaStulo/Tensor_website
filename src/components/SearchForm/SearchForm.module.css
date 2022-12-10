@@ -1,0 +1,27 @@
+.content {
+    margin: 70px 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.input {
+    width: 50%;
+    appearance: none;
+    border: 1px solid #fff;
+    background-color: #fff;
+    border-radius: 12px 0 0 12px;
+    font-size: 16px;
+    padding: 0.5rem;
+    height: 70px;
+}
+
+.button {
+    border: 1px solid #fff;
+    border-radius: 0 12px 12px 0;
+    height: 70px;
+    width: 60px;
+    background: white url('../../../public/img/search_icon.svg') no-repeat;
+    background-size: 40px;
+    background-position-y: 50%;
+    background-position-x: 30%;
+}
