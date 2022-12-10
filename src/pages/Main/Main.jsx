@@ -1,12 +1,15 @@
 import React, {useEffect, useState} from 'react';
 import main from './styles/Main.module.css';
 import tracks from './styles/Tracks.module.css';
+import artists from './styles/Artists.module.css';
 import ArtistsList from "../../components/ArtistsList/ArtistsList";
 import API from "../../utils/API";
+import TracksList from "../../components/TracksList/TracksList";
 
 const Main = () => {
 
     const [artistsList, setArtists] = useState([])
+    const [tracksList, setTracks] = useState([])
 
     async function getGenreByArtistName(name) {
         const {artist} = await API.get('', {method: 'artist.getInfo', artist: name});
@@ -28,20 +31,39 @@ const Main = () => {
         setArtists([...artistsWithTags])
     }
 
+    async function fetchTracks() {
+        const {tracks} = await API.get('', {method: 'chart.gettoptracks', limit: 18});
+
+        const tracksWithTags = await Promise.all(tracks.track.map(async (t) => {
+            const tags = await getGenreByArtistName(t.artist.name);
+            return {
+                trackTitle: t.name,
+                artist: t.artist.name,
+                genre: tags,
+                image: t.image[3]['#text'],
+            }
+        }))
+
+        setTracks([...tracksWithTags])
+    }
+
     useEffect(() => {
         fetchArtists()
+        fetchTracks()
     }, [])
 
     return (
         <main className={main.music}>
             <h1>MUSIC</h1>
-            <h2 className="subtitle">Hot right now</h2>
-            <hr/>
-            <ArtistsList artistsList={artistsList}/>
-            <div className={tracks.main}>
+            <div className={artists.content}>
+                <h2 className="subtitle">Hot right now</h2>
+                <hr/>
+                <ArtistsList artistsList={artistsList}/>
+            </div>
+            <div className={tracks.content}>
                 <h2 className="subtitle">Popular tracks</h2>
                 <hr/>
-                <ul className={tracks.list}/>
+                <TracksList tracksList={tracksList}/>
             </div>
         </main>
     );

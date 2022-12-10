@@ -11,18 +11,17 @@ const ArtistsList = ({artistsList}) => {
             </h2>
         )
     }
+
     return (
-        <div className={artists.content}>
-            <ul className={artists.list}>
-                {artistsList.map((artist) =>
-                    <ArtistCard
-                        key={artist.name}
-                        name={artist.name}
-                        genre={artist.genre}
-                        image={artist.image}/>
-                )}
-            </ul>
-        </div>
+        <ul className={artists.list}>
+            {artistsList.map((artist) =>
+                <ArtistCard
+                    key={artist.name}
+                    name={artist.name}
+                    genre={artist.genre}
+                    image={artist.image}/>
+            )}
+        </ul>
     );
 };
 
