@@ -1,0 +1,182 @@
+body {
+    background: #000;
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    height: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+a {
+    color: #fff;
+}
+
+.header {
+    flex: 1 0 auto;
+}
+
+.header-end {
+    display: flex;
+    align-items: center;
+}
+
+.header-wrapper {
+    display: flex;
+    padding: 1rem 40px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 1024px) {
+    .header-wrapper {
+        flex-direction: column;
+    }
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 40px;
+}
+
+.nav-wrapper__item a {
+    letter-spacing: 3px;
+    font-weight: 800;
+    display: block;
+    padding: 1.5rem 3rem;
+}
+
+.music {
+    margin-top: 50px;
+    text-align: center;
+    flex: 1 0 auto;
+}
+
+h1 {
+    font-size: 52px;
+    font-weight: 600;
+}
+
+.subtitle {
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+hr {
+    border: none;
+    background-color: #D83868;
+    height: 2px;
+    width: 80px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+/* POPULAR ARTISTS*/
+
+.artists {
+    padding: 0 150px;
+}
+
+.artists-list {
+    padding: 0 30px;
+    margin: 30px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+    grid-gap: 2vw;
+    justify-content: space-around;
+}
+
+.artist-card {
+    margin: 10px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.circle {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+.artist-card__title {
+    margin-top: 40px;
+}
+
+.genre {
+    margin-top: 4px;
+    color: #707070;
+    font-weight: 100;
+}
+
+/* POPULAR TRACKS*/
+
+.popular-tracks {
+    display: flex;
+    flex-direction: column;
+}
+
+.tracks-list {
+    display: grid;
+    grid-template-columns: repeat(3, 33.3%);
+    grid-gap: 10px;
+    padding: 40px 50px;
+    justify-items: stretch;
+    justify-content: space-around;
+}
+
+.popular-track {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.track-info {
+    margin-left: 25px;
+    text-align: left;
+}
+
+.track-info__title {
+    font-weight: 600;
+}
+
+.track-cover {
+    width: 80px;
+    height: 80px;
+    background: #60477b;
+}
+
+/*FOOTER*/
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 150px);
+    grid-gap: 2vw;
+    justify-content: space-around;
+    padding: 30px 40px;
+    background-color: #1a1a1a;
+}
+
+.footer-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.head-text {
+    font-weight: 600;
+    color: #5d5d5d;
+    margin-bottom: 10px;
+}
+
+.child-text {
+    margin-bottom: 7px;
+}
