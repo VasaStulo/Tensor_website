@@ -1,0 +1,96 @@
+/* FORM */
+.search {
+    padding: 30px;
+}
+
+.search-form {
+    margin: 70px 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.search-form input {
+    width: 50%;
+    appearance: none;
+    border: 1px solid #fff;
+    background-color: #fff;
+    border-radius: 12px 0 0 12px;
+    font-size: 16px;
+    padding: 0.5rem;
+    height: 70px;
+}
+
+.search-btn {
+    border: 1px solid #fff;
+    border-radius: 0 12px 12px 0;
+    height: 70px;
+    width: 60px;
+    background: white url('../img/search_icon.svg') no-repeat;
+    background-size: 40px;
+    background-position-y: 50%;
+    background-position-x: 30%;
+}
+
+.searched-titles {
+    font-size: 35px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+/* Searched block */
+
+.searched-artists-list, .searched-albums-list {
+    display: grid;
+    grid-template-columns: repeat(4, 160px);
+    gap: 0 0;
+    margin-bottom: 50px;
+}
+
+.searched-artist, .searched-album {
+    position: relative;
+}
+
+.searched-info__artist, .searched-info__album {
+    bottom: 15px;
+    font-size: 12px;
+    left: 15px;
+    line-height: 18px;
+    margin: 0;
+    position: absolute;
+    right: 15px;
+    text-shadow: 0 0 10px rgb(0 0 0 / 70%);
+}
+
+.artist-cover, .album-cover {
+    width: 160px;
+    height: 160px;
+}
+
+.searched-info__artist > .searched-info__name,
+.searched-info__album > .searched-info__title {
+    font-weight: 600;
+}
+
+.searched-tracks-list {
+    border-radius: 30px;
+    background: #fff;
+    color: #1a1a1a;
+    padding: 20px;
+}
+
+.searched-track {
+    background: #fff;
+    display: grid;
+    grid-template-columns: 50px 330px 200px 40px;
+    align-items: center;
+}
+
+.track-info__title {
+    font-weight: 800;
+}
+
+.track-cover {
+    width: 32px;
+    height: 32px;
+}
+

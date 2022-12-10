@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <link rel="icon" href="img/favicon.ico"/>
-    <link rel="stylesheet" type="text/css" href="null_style.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="../img/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../null_style.css">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" type="text/css" href="./search_style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
@@ -14,41 +15,55 @@
             name="description"
             content="Web site created using create-react-app"
     />
-    <title>LastFM</title>
-    <script src="./api.js"></script>
-    <script src="./index.js"></script>
+    <title>Search</title>
 </head>
 <body>
 <div class="wrapper">
     <header class="header">
         <div class="header-wrapper">
             <div class="header-start">
-                <a href="#" class="header-start__logo"><img src="img/logo.svg" alt="ico"/></a>
+                <a href="#" class="header-start__logo"><img src="../img/logo.svg" alt="ico"/></a>
             </div>
             <div class="header-end">
                 <nav class="nav">
                     <ul class="nav-wrapper">
-                        <li class="nav-wrapper__item"><a href="#artists">Artist</a></li>
-                        <li class="nav-wrapper__item"><a href="#popular-tracks">Tracks</a></li>
-                        <li class="nav-wrapper__item"><a href="search/index.html">Search</a></li>
+                        <li class="nav-wrapper__item"><a href="../index.html#artists">Artist</a></li>
+                        <li class="nav-wrapper__item"><a href="../index.html#popular-tracks">Tracks</a></li>
+                        <li class="nav-wrapper__item"><a href="index.html">Search</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
-    <main class="music">
-        <h1>MUSIC</h1>
-        <div id="artists" class="artists">
-            <h2 class="subtitle">Hot right now</h2>
-            <hr>
-            <ul class="artists-list">
+    <main class="search">
+        <h1>Search</h1>
+        <div>
+            <form class="search-form" action="">
+                <input
+                        type="search"
+                        name="search-input"
+                        id="search"
+                        placeholder="Search"
+                />
+                <button type="submit" id="search-btn" class="search-btn"></button>
+            </form>
+        </div>
+        <div class="searched-artists-wrapper">
+            <h2 class="searched-titles">Artist</h2>
+            <ul class="searched-artists-list">
             </ul>
         </div>
-        <div id="popular-tracks" class="popular-tracks">
-            <h2 class="subtitle">Popular tracks</h2>
-            <hr>
-            <ul class="tracks-list"></ul>
+        <div class="searched-albums-wrapper">
+            <h2 class="searched-titles">Albums</h2>
+            <ul class="searched-albums-list">
+            </ul>
         </div>
+        <div class="searched-tracks-wrapper">
+            <h2 class="searched-titles">Tracks</h2>
+            <ul class="searched-tracks-list">
+            </ul>
+        </div>
+
     </main>
     <footer class="footer">
         <div class="footer-text">
@@ -79,5 +94,7 @@
 </div>
 <noscript>You need to enable JavaScript to run this app.</noscript>
 <div id="root"></div>
+<script src="../api.js"></script>
+<script src="./index.js"></script>
 </body>
 </html>
