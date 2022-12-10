@@ -2,7 +2,7 @@ import {createBrowserRouter} from "react-router-dom";
 import Search from "../pages/Search";
 import Root from "./Root";
 import ErrorPage from "../pages/ErrorPage";
-import Main from "../pages/Main";
+import Main from "../pages/Main/Main";
 
 export const router = createBrowserRouter([
     {

@@ -1,0 +1,34 @@
+.main {
+    flex: 1 0 auto;
+}
+
+.end {
+    display: flex;
+    align-items: center;
+}
+
+.wrapper {
+    display: flex;
+    padding: 1rem 40px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 1024px) {
+    .wrapper {
+        flex-direction: column;
+    }
+}
+
+.navWrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 40px;
+}
+
+.nav__item a {
+    letter-spacing: 3px;
+    font-weight: 800;
+    display: block;
+    padding: 1.5rem 3rem;
+}

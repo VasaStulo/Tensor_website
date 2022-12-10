@@ -1,0 +1,36 @@
+/* POPULAR TRACKS*/
+
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.list {
+    display: grid;
+    grid-template-columns: repeat(3, 33.3%);
+    grid-gap: 10px;
+    padding: 40px 50px;
+    justify-items: stretch;
+    justify-content: space-around;
+}
+
+.track {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.trackInfo {
+    margin-left: 25px;
+    text-align: left;
+}
+
+.trackInfo__title {
+    font-weight: 600;
+}
+
+.trackCover {
+    width: 80px;
+    height: 80px;
+    background: #60477b;
+}
