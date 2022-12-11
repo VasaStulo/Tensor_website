@@ -1,0 +1,23 @@
+body {
+    background: #000;
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    height: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+a {
+    color: #fff;
+}
+
+h1 {
+    font-size: 52px;
+    font-weight: 600;
+}

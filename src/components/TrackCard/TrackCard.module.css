@@ -1,0 +1,26 @@
+.content {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.info {
+    margin-left: 25px;
+    text-align: left;
+}
+
+.title {
+    font-weight: 600;
+}
+
+.cover {
+    width: 80px;
+    height: 80px;
+    background: #60477b;
+}
+
+.genre {
+    margin-top: 4px;
+    color: #707070;
+    font-weight: 100;
+}

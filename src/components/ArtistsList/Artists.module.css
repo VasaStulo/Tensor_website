@@ -1,0 +1,10 @@
+/* POPULAR ARTISTS*/
+
+.list {
+    padding: 0 30px;
+    margin: 30px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+    grid-gap: 2vw;
+    justify-content: space-around;
+}

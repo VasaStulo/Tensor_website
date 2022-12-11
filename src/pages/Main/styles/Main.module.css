@@ -1,0 +1,16 @@
+.music {
+    margin-top: 50px;
+    text-align: center;
+    flex: 1 0 auto;
+}
+
+hr {
+    border: none;
+    background-color: #D83868;
+    height: 2px;
+    width: 80px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}

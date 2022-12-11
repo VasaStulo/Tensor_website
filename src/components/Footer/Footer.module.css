@@ -1,0 +1,26 @@
+/*FOOTER*/
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 150px);
+    grid-gap: 2vw;
+    justify-content: space-around;
+    padding: 30px 40px;
+    background-color: #1a1a1a;
+}
+
+.footer-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.head-text {
+    font-weight: 600;
+    color: #5d5d5d;
+    margin-bottom: 10px;
+}
+
+.child-text {
+    margin-bottom: 7px;
+}
