@@ -9,8 +9,7 @@ const Header = () => {
                 <Link to={"/"}><img src="img/logo.svg" alt="ico"/></Link>
                 <nav className={header.end}>
                     <ul className={header.navWrapper}>
-                        <li className={header.nav__item}><Link to={"/"}>Artist</Link></li>
-                        <li className={header.nav__item}><a href="#popular-tracks">Tracks</a></li>
+                        <li className={header.nav__item}><Link to="/">Home</Link></li>
                         <li className={header.nav__item}><Link to="search">Search</Link></li>
                     </ul>
                 </nav>

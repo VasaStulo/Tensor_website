@@ -4,6 +4,9 @@ import Root from "./Root";
 import ErrorPage from "../pages/ErrorPage";
 import Main from "../pages/Main/Main";
 
+/**
+ * Router приложения
+ */
 export const router = createBrowserRouter([
     {
         path: '/',

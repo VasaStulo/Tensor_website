@@ -1,6 +1,6 @@
-// const LAST_FM_TOKEN = '9fa9f1f40bb4a52e96940d079b7cf062';
-// const BASE_URL = 'https://ws.audioscrobbler.com/2.0';
-
+/**
+ * Класс для работы с API
+ */
 class API {
     #LAST_FM_TOKEN = '9fa9f1f40bb4a52e96940d079b7cf062';
     #BASE_URL = 'https://ws.audioscrobbler.com/2.0';
