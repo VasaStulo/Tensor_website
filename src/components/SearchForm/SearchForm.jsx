@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import form from './SearchForm.module.css';
 
-const SearchForm = () => {
+const SearchForm = (props) => {
     const [value, setValue] = useState('');
     return (
         <form className={form.content}>
@@ -11,7 +11,10 @@ const SearchForm = () => {
                 placeholder="Search"
                 onChange={e => setValue(e.target.value)}
             />
-            <button onClick={e => e.preventDefault()} type="submit" className={form.button}/>
+            <button onClick={e => {
+                e.preventDefault();
+                props.search(value)
+            }} type="submit" className={form.button}/>
         </form>
     );
 };
