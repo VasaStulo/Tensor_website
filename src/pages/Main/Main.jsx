@@ -11,6 +11,8 @@ const Main = () => {
 
     const [artistsList, setArtists] = useState([])
     const [tracksList, setTracks] = useState([])
+    const [isLoadingArtists, setLoadingArtists] = useState(false);
+    const [isLoadingTracks, setLoadingTracks] = useState(false);
 
     async function getGenreByArtistName(name) {
         const {artist} = await API.get('', {method: 'artist.getInfo', artist: name});
@@ -18,6 +20,7 @@ const Main = () => {
     }
 
     async function fetchArtists() {
+        setLoadingArtists(true);
         const {artists} = await API.get('', {method: 'chart.gettopartists', limit: 12});
 
         const artistsWithTags = await Promise.all(artists.artist.map(async (a) => {
@@ -30,9 +33,11 @@ const Main = () => {
         }))
 
         setArtists([...artistsWithTags])
+        setLoadingArtists(false);
     }
 
     async function fetchTracks() {
+        setLoadingTracks(true);
         const {tracks} = await API.get('', {method: 'chart.gettoptracks', limit: 18});
 
         const tracksWithTags = await Promise.all(tracks.track.map(async (t) => {
@@ -46,6 +51,7 @@ const Main = () => {
         }))
 
         setTracks([...tracksWithTags])
+        setLoadingTracks(false);
     }
 
     useEffect(() => {
@@ -59,12 +65,12 @@ const Main = () => {
             <div className={artists.content}>
                 <Subtitle title={"Hot right now"}/>
                 <hr/>
-                <ArtistsList artistsList={artistsList}/>
+                <ArtistsList artistsList={artistsList} isLoading={isLoadingArtists}/>
             </div>
             <div className={tracks.content}>
                 <Subtitle title={"Popular tracks"}/>
                 <hr/>
-                <TracksList tracksList={tracksList}/>
+                <TracksList tracksList={tracksList} isLoading={isLoadingTracks}/>
             </div>
         </main>
     );

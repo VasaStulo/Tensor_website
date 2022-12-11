@@ -2,9 +2,9 @@ import React from 'react';
 import TrackCard from "../TrackCard/TrackCard";
 import tracks from "../../pages/Main/styles/Tracks.module.css";
 
-const TracksList = ({tracksList}) => {
+const TracksList = ({tracksList, isLoading}) => {
 
-    if (!tracksList.length) {
+    if (!tracksList.length && !isLoading) {
         return (
             <h2 style={{textAlign: 'center', marginTop: '20px'}}>
                 is empty here :(

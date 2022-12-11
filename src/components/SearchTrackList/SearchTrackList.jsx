@@ -10,15 +10,18 @@ const SearchTrackList = ({trackList}) => {
                 ? <Subtitle title="Tracks"/>
                 : ''
             }
-            <ul className={tracksList.content}>
-                {trackList.map((t) => <SearchTrackCard
-                    name={t.name}
-                    key={t.trackTitle}
-                    trackTitle={t.trackTitle}
-                    duration={t.duration}
-                    image={t.image}
-                />)}
-            </ul>
+            {trackList.length !== 0
+                ? <ul className={tracksList.content}>
+                    {trackList.map((t) => <SearchTrackCard
+                        name={t.name}
+                        key={t.trackTitle}
+                        trackTitle={t.trackTitle}
+                        duration={t.duration}
+                        image={t.image}
+                    />)}
+                </ul>
+                : ''
+            }
         </>
     );
 };

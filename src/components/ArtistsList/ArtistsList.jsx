@@ -2,9 +2,9 @@ import React from 'react';
 import artists from "./Artists.module.css";
 import ArtistCard from "../ArtistCard/ArtistCard";
 
-const ArtistsList = ({artistsList}) => {
+const ArtistsList = ({artistsList, isLoading}) => {
 
-    if (!artistsList.length) {
+    if (!artistsList.length && !isLoading) {
         return (
             <h2 style={{textAlign: 'center', marginTop: '20px'}}>
                 is empty here :(
